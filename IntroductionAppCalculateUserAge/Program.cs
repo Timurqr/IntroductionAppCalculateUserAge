@@ -6,11 +6,12 @@ namespace IntroductionAppCalculateUserAge
     {
         static void Main(string[] args)
         {
+            const int adultMarker = 18;
+
             Console.Write("Enter year of your birth:");
-            var yearOfBirch = Convert.ToInt32(Console.ReadLine());
-            var currentYear = DateTime.Today.Year;
-            var userAge = currentYear - yearOfBirch;
-            var adultMarker = 18;
+            int yearOfBirch = Convert.ToInt32(Console.ReadLine());
+            int currentYear = DateTime.Today.Year;
+            int userAge = currentYear - yearOfBirch;           
 
             if (userAge >= adultMarker)
                 Console.WriteLine(userAge + " years, you are adult.");
